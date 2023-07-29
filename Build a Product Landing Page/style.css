@@ -1,0 +1,231 @@
+body{
+    padding:0;
+    margin:0;
+    background-color: rgb(242, 242, 247);
+}
+#header{
+    background-color: rgb(200, 193, 82);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    max-height: 180px;
+    height: auto;
+}
+#header img{
+    width: 90%;
+    height: auto;
+    margin: 1em 0.5em 0 0.5em;
+}
+#nav-bar ul{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    list-style: none;  
+    text-align: center;
+    grid-column-gap: 1.5em;
+    padding: 0;
+    margin-left: 0.5em;
+}
+#header a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-family: monospace;
+    font-size: 13px;
+}
+#intro-section{
+    padding-top:160px;  
+    display: flex;
+    height: 65vh;
+    min-height: 300px;
+    flex-direction: column;
+    text-align: center;
+}
+#img{
+    background-image:  
+        url(http://getwallpapers.com/wallpaper/full/9/9/0/361986.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 80%;
+        align-self: center;
+        height: 250px;
+        min-height: 250px;
+        border: 1px solid grey;
+}
+form{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+}
+#email{
+    align-self: center;
+    width: 50%;
+    height: 2em;
+    border-radius: 5px;
+}
+#submit{
+    align-self: center;
+    width: 20%;
+    height: 2.4em;
+    border-radius: 5px;
+    margin: 1.5em 0;
+    background-color: burlywood;
+}
+#features{
+    padding-top: 150px;
+    display: flex;
+    flex-direction: column;
+}
+#features > div{
+    align-self: center;
+    width: 80%;
+}
+#features h1{
+    text-align: center;
+}
+#howitworks{
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4em;
+    height: 100vh;
+}
+#video{
+  width:90%;
+}
+#pricing{
+    padding-top: 160px;
+    display: flex;
+    flex-direction: column;
+}
+#pricing h1{
+    align-self: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.price-card{
+    align-self: center;
+    width: 70%;
+    border: 1px solid black;
+    text-align: center;
+    margin: 0 0 4em 0;
+    box-shadow: 0 0.5em 0.5em grey;
+}
+.price-card > div{
+    background-color: rgb(80, 178, 185);
+    padding: 0.5em;
+    max-width: 100%;
+    font-family: monospace;
+    letter-spacing: 0.2em;
+}
+button{
+    padding: 0.6em 2em;
+    margin: 1em 0 3em 0;
+    border-radius: 5px;
+    background-color: rgb(209, 147, 65);
+}
+#footer-item{
+    display: flex;
+    flex-direction: column;
+}
+#item-one{
+    align-self: center;
+}
+#item-one ul{
+    display: flex;
+    list-style: none;
+}
+#item-one a{
+    display: block;
+    padding:0;
+    margin: 0 2.2em 0 0;
+    text-decoration: none;
+    color: black;
+}
+#item-two{
+    align-self: center;
+    padding-bottom: 1em;
+}
+#footer{
+    background-color: rgb(200, 193, 82);
+}
+
+@media (min-width:600px)
+{
+    #intro-section{
+        height: auto;
+        font-size: 1.2em;
+    }
+    #img{
+        width: 70%;
+        height:330px;
+    }
+    #video{
+        width: 80%;
+        height: 380px;
+    }
+}
+@media (min-width:1000px)
+{
+    #header{
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: space-around;
+        height: 5em;
+    }
+    #header img{
+        width: 50%;
+        height: auto;
+        margin: 1.4em 0 0 1em;
+    }
+    #nav-bar ul{
+        margin: 2em 3em 0 0;
+        padding: 0;
+    }
+    #nav-bar a{
+        font-size: 1.2em;
+        padding: 0 1em;
+    }
+    #intro-section{
+        padding-top: 100px;
+    }
+    #img{
+        width: 50%;
+        height: 350px;
+    }
+    #features{
+        padding-top: 80px;
+    }
+    #features > div{
+        text-align: center;
+        padding-top: 2em;
+    }
+    #howitworks{
+        padding-top: 150px;
+        padding-bottom: 120px;
+    }
+    #video{
+        width: 60%;
+        height: 380px;
+    }
+    #pricing{
+        padding-top: 80px;
+        display: grid;
+        grid-template-areas: 
+            'heading heading heading'
+            'card1 card2 card3';
+        margin-bottom: 2em;
+    }
+    #pricing h1{
+        grid-area: heading;
+        text-align: center;
+        font-size: 2em;
+    }
+    .price-card{
+        justify-self: center;
+        border-radius: 5px;
+        box-shadow: 0 0.5em 0.5em grey;
+    }
+}
